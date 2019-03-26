@@ -1,0 +1,98 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "e67f2b67-e3cd-42cf-9a6b-38d36c5a1498": {
+        "id": "e67f2b67-e3cd-42cf-9a6b-38d36c5a1498",
+        "parent": null,
+        "name": "JsonSyncTest",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "c812f799-a842-4fef-8e8d-af1ce52af99e",
+          "69744c2b-bfaa-4243-843e-0a8d42ebb717"
+        ],
+        "isRemovable": false,
+        "filePath": "JsonSyncTest"
+      },
+      "c812f799-a842-4fef-8e8d-af1ce52af99e": {
+        "id": "c812f799-a842-4fef-8e8d-af1ce52af99e",
+        "parent": "e67f2b67-e3cd-42cf-9a6b-38d36c5a1498",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "JsonSyncTest/lambda.js",
+        "code": "let data = require('./data.json');\n\nexports.handler = function(event, context, callback) {\n    \n    console.log(data);\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [],
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "testCases": {
+          "76e533ea-cf55-470f-a9b9-17a77145f7cb": {
+            "id": "76e533ea-cf55-470f-a9b9-17a77145f7cb",
+            "name": "E1",
+            "functionId": "c812f799-a842-4fef-8e8d-af1ce52af99e",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      },
+      "69744c2b-bfaa-4243-843e-0a8d42ebb717": {
+        "id": "69744c2b-bfaa-4243-843e-0a8d42ebb717",
+        "parent": "e67f2b67-e3cd-42cf-9a6b-38d36c5a1498",
+        "name": "data.json",
+        "type": "JSON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "JsonSyncTest/data.json",
+        "code": "[\n    {\n        \"name\": \"Mike\",\n        \"age\": 26\n    },\n    {\n        \"name\": \"Bill\",\n        \"age\": 22\n    }\n]"
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "e67f2b67-e3cd-42cf-9a6b-38d36c5a1498",
+    "openFiles": [
+      "c812f799-a842-4fef-8e8d-af1ce52af99e",
+      "69744c2b-bfaa-4243-843e-0a8d42ebb717"
+    ],
+    "currentFileId": "c812f799-a842-4fef-8e8d-af1ce52af99e",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "JsonSyncTest",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1553583399893
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "JsonSyncTest",
+      "url": "https://github.com/sigmaidetest/JsonSyncTest"
+    }
+  }
+}
